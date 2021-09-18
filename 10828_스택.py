@@ -16,6 +16,9 @@ top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들
 출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
 """
 
+import sys # 시간을 줄이기 위함
+input = sys.stdin.readline # 시간을 줄이기 위함
+
 s = [] # 스택
 N = int(input()) # 명령의 수
 
@@ -45,7 +48,7 @@ def top():
         print(s[(len(s)-1)])
 
 
-for i in range(N-1):
+for i in range(N):
     x = input().split()
     if x[0]=='push':
         push(x[1])
