@@ -16,8 +16,10 @@
 """
 
 from sys import stdin
-N, k = map(int, stdin.readline().rstrip().split(" "))
-
-l = list(map(int, stdin.readline().split(" ")))
-l.sort(reverse=True)
-print(l[k-1])
+N = int(stdin.readline())
+l = []
+for i in range(N):
+  l.append(int(stdin.readline()))
+l.sort()
+for i in range(N):
+  print(l[i])
